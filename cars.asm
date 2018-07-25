@@ -91,9 +91,6 @@ confronto3: lh $t1, 0($t0)              # Carico i 16 bit di IN_OUT in modo da p
             ori $t1, $t1, 0x00C0        # Modifico il valore dei bit 7 e 6 in modo da ottenere la convenzione '11'
             sh $t1, 0($t0)
 
-            j attesafoto                # Salto per l'attesa di 1 secondo
-
-
 # FOTOCAMERA
 attesafoto: addi $t7, $t7, -1           # Decremento di 1 per far passare un secondo
             beq $t7, $zero, camera      # Se il secondo è passato, vado a camera per scattare la foto
